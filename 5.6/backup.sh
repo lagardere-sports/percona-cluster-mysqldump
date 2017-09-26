@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-BACKUP_TARGET=/tmp/${BACKUP_NAME:=backup}.tar
+BACKUP_TARGET=/tmp/${BACKUP_NAME:=mysqldump}.sql
 
 echo -n "Initialize receiver..."
 nc -l 4444 > $BACKUP_TARGET &
